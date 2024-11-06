@@ -1,0 +1,25 @@
+@import '../../../../styles/settings.scss';
+
+.workModalTag {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    &__title {
+        font-size: 18px;
+        color: $text-color;
+        font-weight: 500;
+    }
+
+    &__selector {
+        width: 100%;
+        font-weight: 500;
+        border: 2px solid $text-color;
+        color: $title-color;
+        padding: 5px 7px;
+
+        & option {}
+    }
+
+
+}

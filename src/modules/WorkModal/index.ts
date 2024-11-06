@@ -1,0 +1,1 @@
+export {WorkModal} from './WorkModalComponents/WorkModal/WorkModal'

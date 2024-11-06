@@ -1,0 +1,42 @@
+@import '../../../../styles/settings.scss';
+.homeReviewsSlider{
+    &_empty{
+        display: flex;
+        padding-bottom: 30px !important;
+        & div{
+            box-sizing: content-box;
+            border-radius: 10px;
+            width: 100%;
+            opacity: .5;
+            background-color: $secondary-color;
+            height: 250px;
+            margin: 0 10px;
+        }
+        & div:nth-child(2n){
+            display: none;
+        }
+        & div:nth-child(3n){
+            display: none;
+        }
+        @media (min-width: 700px) {
+            & div:nth-child(2n) {
+                display: block;
+            }
+
+            @media (min-width: 1150px) {
+                & div:nth-child(3n) {
+                    display: block;
+                }
+            }
+        }
+
+    }
+    &__slide{
+        height: 100%;
+    }
+    &__review{
+        height: 250px;
+        margin: 0 10px;
+
+    }
+}

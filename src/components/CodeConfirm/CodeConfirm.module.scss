@@ -1,0 +1,41 @@
+@import '../../styles/settings.scss';
+.codeConfirm{
+
+    &__input{
+        margin-top: 12px;
+        width: 100%;
+        background-color: transparent !important;
+        padding: 8px 25px;
+        text-align: center;
+        font-size: 18px;
+        display: block;
+        border: 2px solid rgba($text-color, .7) !important;
+        transition: all .2s ease-in-out;
+        &:hover,
+        &:focus {
+            border-color: $title-color !important;
+        }
+    }
+    &__send{
+        width: 100%;
+        margin-top: 6px;
+        font-size: 16px;
+        display: block;
+        color: $title-color;
+        border: none;
+        padding: 0;
+        text-align: center;
+        &:disabled{
+            cursor: default;
+            pointer-events: none;
+            color: $text-color;
+        }
+    }
+    &__loader{
+        position: fixed !important;
+        top: 15px;
+        right: 15px;
+        font-size:  50px;
+
+    }
+}

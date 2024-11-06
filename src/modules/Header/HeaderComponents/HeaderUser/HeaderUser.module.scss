@@ -1,0 +1,24 @@
+@import '../../../../styles/settings.scss';
+
+.headerUser {
+    display: flex;
+
+    &__imageBox {
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        display: block;
+        object-fit: cover;
+        background-color: $secondary-color;
+    }
+
+}
+

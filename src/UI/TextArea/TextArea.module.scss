@@ -1,0 +1,24 @@
+@import '../../styles/settings.scss';
+.textArea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 2.2em;
+    max-height: 7em;
+    resize: vertical;
+    padding: 5px 7px;
+    border: 2px solid rgba($title-color, .7);
+    border-radius: 0;
+    color: $title-color;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        border-color: $title-color;
+
+        &~.form_button {
+            background-color: $primary-color ;
+        }
+    }
+
+}

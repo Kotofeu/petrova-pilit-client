@@ -1,0 +1,36 @@
+@import '../../../../styles/settings.scss';
+.grid {
+
+    &__card {
+        width: 100%;
+        aspect-ratio: 4/3;
+        position: relative;
+        z-index: 1;
+        &_empty{
+            background-color: $secondary-color;
+            display: none;
+            position: relative;
+            z-index: 0;
+        }
+    }
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(.8);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+
+    }
+}
+@media (min-width: 1023.98px) {
+    .grid {
+        &__card_empty {
+            display: block;
+        }
+    }
+}

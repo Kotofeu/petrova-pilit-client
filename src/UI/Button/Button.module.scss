@@ -1,0 +1,27 @@
+@import '../../styles/settings.scss';
+
+.button {
+    background-color: transparent;
+    border: 1px solid $neutral-color;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    color: $neutral-color;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    @media (hover: hover) {
+        &:hover {
+            border-color: $active-color;
+            color: $active-color;
+        }
+
+    }
+
+    @media (hover: none) {
+        &:active {
+            border-color: $active-color;
+            color: $active-color;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/settings.scss';
+
+.tab {
+    position: relative;
+    border: none;
+    position: relative;
+    transition: color .2s ease-in-out;
+    color: #FFF;
+    display: block;
+    white-space: break-spaces;
+
+    & span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        padding: inherit;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #FFF;
+        opacity: 0;
+        transition: all .3s linear;
+        white-space: break-spaces;
+        font: inherit;
+
+    }
+
+    &__activeLine {
+        width: 100%;
+        top: 0;
+        height: 100%;
+        border: 2px solid $active-color;
+        z-index: 1;
+        border-radius: 0;
+    }
+}

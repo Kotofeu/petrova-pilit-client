@@ -1,0 +1,7 @@
+@import '../../styles/settings.scss';
+
+.map{
+    &_empty{
+        background-color: $secondary-color;
+    }
+}

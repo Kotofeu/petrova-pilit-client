@@ -1,0 +1,286 @@
+@import '../../styles/settings.scss';
+
+.userCard {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    background-color: #FFF;
+    position: relative;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__userVisits {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $secondary-color;
+        color: $title-color;
+        clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        width: 2.2em;
+        height: 2.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+
+
+    &__imageBox {
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    &__userImage {
+        width: 200px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        margin: 0 auto;
+        background-color: $primary-color;
+        border: 1px solid $neutral-color;
+    }
+
+    &__userLevel {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 2px;
+    }
+
+    &__content {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__fields {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 20px;
+    }
+
+    &__field {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // Для 320px
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        row-gap: 4px;
+        font-size: 16px;
+
+        & a {
+            color: $green-color-600;
+            cursor: pointer;
+            opacity: .7;
+            transition: all .15s ease-in-out;
+            filter: grayscale(40%);
+
+            @media (hover: hover) {
+                &:hover {
+                    opacity: 1;
+                    filter: grayscale(0%);
+
+                }
+
+            }
+
+            @media (hover: none) {
+                &:active {
+                    opacity: 1;
+                    filter: grayscale(0%);
+
+                }
+            }
+        }
+    }
+
+    &__fieldFlex {
+        // Для 320px
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &__fieldName {
+        flex-shrink: 0;
+        font-size: inherit;
+        font-weight: 600;
+        color: $title-color;
+        min-width: 90px;
+        line-height: 1.2em;
+
+    }
+
+    &__fieldValue {
+        width: auto !important;
+        flex-grow: 1;
+        font-size: inherit;
+        font-weight: 500;
+        line-height: 1.2em;
+    }
+
+    &__nameBtn {
+        width: 26px;
+        height: 26px;
+        flex-shrink: 0;
+
+    }
+
+    &__footer {
+        padding: 20px 15px;
+        background-color: $secondary-color;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        row-gap: 15px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        width: 100%;
+        gap: 10px;
+    }
+
+    &__button {
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        font-size: 18px;
+
+        &_active {
+            color: $active-color !important;
+        }
+    }
+
+    &__counter {
+        font-size: 24px;
+        padding: 9px 0;
+        border-radius: 5px;
+        border: 1px solid $neutral-color;
+        width: 100%;
+
+    }
+
+    &_short {
+        padding: 30px 20px 20px !important;
+        flex-direction: column !important;
+        gap: 40px;
+
+        .userCard__imageBox {
+            padding: 0 40px;
+        }
+
+        .userCard__userImage {
+            border-radius: 50%;
+        }
+
+        .userCard__fieldValue {
+            padding: 0px !important;
+            flex-grow: 0 !important;
+        }
+
+        .userCard__fields {
+            max-width: 500px !important;
+            width: 100%;
+            margin: 0 auto;
+            justify-content: space-between !important;
+        }
+
+    }
+}
+
+@media (min-width: 359.98px) {
+    .userCard {
+        &_short {
+            .userCard__field {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 479.98px) {
+    .userCard {
+        &__fields {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__fieldName {
+            min-width: 100px;
+
+        }
+
+        &__field {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        &__fieldValue {
+            padding: 5px;
+        }
+    }
+
+}
+
+
+@media (min-width: 767.98px) {
+    .userCard_short {
+        .userCard__imageBox {
+            padding: 0;
+        }
+    }
+
+    .userCard {
+        flex-direction: row;
+        padding: 20px 25px;
+        gap: 40px;
+
+        &__fields {
+            max-width: none;
+            padding: 0;
+            padding-bottom: 15px;
+        }
+
+        &__footer {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        &__imageBox {
+            padding: 0;
+        }
+    }
+
+
+}
+
+@media (min-width: 1023.98px) {}

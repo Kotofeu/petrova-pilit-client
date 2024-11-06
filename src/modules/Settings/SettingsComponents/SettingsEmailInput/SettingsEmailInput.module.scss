@@ -1,0 +1,20 @@
+@import '../../../../styles/settings.scss';
+.settingsEmailInput{
+    font-size: 18px;
+    font-weight: 500;
+    &__modalTitle{
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.2em;
+        color: $text-color;
+    }
+    &__modalEmail{
+        padding-top: 3px;
+        font-size: 18px;
+        color: $text-color;
+        line-height: 1.2em;
+        font-weight: 400;
+        text-align: center;
+    }
+}

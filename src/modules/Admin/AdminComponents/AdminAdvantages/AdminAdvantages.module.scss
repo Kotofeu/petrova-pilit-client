@@ -1,0 +1,121 @@
+@import '../../../../styles/settings.scss';
+
+.adminAdvantages {
+    &__item {
+        background-color: $secondary-color;
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        width: auto !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+
+
+    &__row {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+    }
+
+    &__name {
+        flex-shrink: 0;
+        font-weight: 600;
+        min-width: 120px;
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 14px;
+
+    }
+
+    &__textArea {
+        font-size: 14px;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    &__inputs {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+
+    }
+
+    &__image{
+        width: 100%;
+        margin-top: 10px;
+        height: 300px;
+
+    }
+
+
+}
+
+@media (min-width: 479.98px) {
+    .adminAdvantages {
+        &__row {
+
+            font-size: 16px;
+        }
+        &__main{
+            gap: 10px;
+        }
+        &__image{
+            max-width: none;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .adminAdvantages {
+        &__item {
+            align-items: center !important;
+        }
+
+        &__main{
+            flex-direction: row;
+        }
+
+        &__input,
+        &__textArea {
+            font-size: 16px;
+
+        }
+
+
+    }
+}

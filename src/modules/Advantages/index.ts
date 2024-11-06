@@ -1,0 +1,1 @@
+export {AdvantagesSection} from './AdvantagesComponents/AdvantagesSection/AdvantagesSection'

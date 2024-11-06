@@ -1,0 +1,106 @@
+@import '../../../../styles/settings.scss';
+
+.adminSocial {
+    &__item {
+        background-color: $secondary-color;
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        width: auto !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    &__name {
+        flex-shrink: 0;
+        font-weight: 600;
+        min-width: 120px;
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    &__inputs {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__textArea {
+        
+
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+
+    }
+
+
+    &__button {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .adminSocial {
+        &__row {
+            gap: 10px;
+            font-size: 16px;
+
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .adminSocial {
+        &__item {
+            align-items: center !important;
+        }
+
+        &__row {
+            flex-direction: row;
+
+        }
+
+        &__icons {}
+
+        &__inputs {}
+
+    }
+}

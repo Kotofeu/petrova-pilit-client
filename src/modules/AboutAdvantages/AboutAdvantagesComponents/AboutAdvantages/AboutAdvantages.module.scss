@@ -1,0 +1,136 @@
+@import '../../../../styles/settings.scss';
+
+.aboutAdvantages {
+    margin-top: 30px;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        max-width: 1400px;
+        word-wrap: 100%;
+        margin: 0 auto;
+        margin-top: 18px;
+    }
+
+    &__slider {
+        max-width: 600px;
+    }
+
+    &__slide {}
+
+    &__imageBox {
+        width: auto;
+        height: 100%;
+    }
+
+    &__image {
+        pointer-events: none;
+        user-select: none;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &__list {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    &__advantage {
+        position: relative;
+        padding-left: 15px;
+
+        &_selected {
+            color: $active-color;
+        }
+    }
+
+    &__activeLine {
+        top: 5px !important;
+        bottom: 5px !important;
+        left: 0 !important;
+        width: 5px !important;
+        right: auto !important;
+        height: auto !important;
+    }
+
+    &__advantageTitle {
+        font-size: 22px;
+        transition: color .2s ease-in-out;
+        color: inherit;
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__advantageDesc {
+        font-size: 16px;
+        font-weight: 500;
+        transition: color .2s ease-in-out;
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 479.98px) {
+
+    .aboutAdvantages {
+        &__inner {
+            margin-top: 20px;
+        }
+        &__list {
+            gap: 7px;
+        }
+        &__advantageTitle {
+            font-size: 26px;
+
+        }
+        &__advantageDesc {
+            font-size: 20px;
+
+        }
+    }
+}
+
+
+
+
+@media (min-width: 1023.98px) {
+    .aboutAdvantages {
+        margin-top: 40px;
+        &__inner {
+            flex-direction: row;
+            gap: 40px;
+            margin-top: 35px;
+        }
+        &__advantage {
+            padding-left: 20px;
+        }
+        &__list {
+            width: 100%;
+        }
+
+
+        &__advantageDesc {
+            
+            font-size: 22px;
+            max-width: none;
+
+        }
+        &__list {
+            gap: 10px;
+        }
+
+    
+    }
+}

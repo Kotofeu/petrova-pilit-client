@@ -1,0 +1,27 @@
+@import '../../styles/settings.scss';
+
+.avatar{
+    position: relative;
+    pointer-events: none;
+    &__image{
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    &__decoration{
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: fill;
+        height: 100%;
+        width: 100%;
+
+    }
+    &__decoration:nth-child(2) {
+
+    }
+}

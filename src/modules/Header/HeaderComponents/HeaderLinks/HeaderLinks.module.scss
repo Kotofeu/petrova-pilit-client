@@ -1,0 +1,31 @@
+@import '../../../../styles/settings.scss';
+
+.headerLink {
+    position: relative;
+    font-weight: 600;
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+    color: $title-color;
+    transition: color .3s ease-in-out;
+    @media (hover: hover) {
+        &:hover {
+            color: $active-color;
+        }
+
+    }
+
+    @media (hover: none) {
+        &:active {
+            color: $active-color;
+        }
+    }
+    &__activeLine {
+        width: 90% !important;
+    }
+
+    &_active {
+        color: $active-color;
+    }
+
+}

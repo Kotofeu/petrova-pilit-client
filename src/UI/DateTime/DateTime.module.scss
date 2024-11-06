@@ -1,0 +1,20 @@
+
+.dateTime {
+    display: flex;
+}
+
+.dateTime_date {
+    color: inherit;
+    font-weight: 600;
+    font-size: inherit;
+    border-color: inherit;
+    &___time {
+        border-left: none;
+        border-right: 2px solid;
+        padding-right: .5em;
+        margin-right: .5em;
+        padding-left: 0;
+        position: relative;
+
+    }
+}

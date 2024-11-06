@@ -1,0 +1,84 @@
+@import '../../../../styles/settings.scss';
+
+.reviewsNavbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__loader{
+        position: fixed !important;
+        top: 15px;
+        right: 15px;
+        font-size:  50px;
+        z-index: 99999;
+    }
+    &__inner {
+        padding: 10px 10px 25px;
+
+    }
+
+    &__title {
+        font-size: 40px;
+        padding-top: 80px;
+        text-align: center;
+        line-height: .92em;
+        color: $primary-color;
+    }
+
+    &__button {
+        margin-top: 20px;
+        width: 100%;
+        color: $primary-color;
+        border-color: $primary-color;
+        font-size: 20px;
+        border-width: 2px;
+    }
+
+}
+
+@media (min-width: 479.98px) {
+    .reviewsNavbar {
+        &__inner {
+            padding: 30px;
+        }
+
+        &__title {
+            font-size: 50px;
+            padding-top: 65px;
+
+        }
+
+        &__button {
+            margin-top: 20px;
+            font-size: 26px;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .reviewsNavbar {
+        &__title {
+            font-size: 60px;
+        }
+
+        &__button {
+            margin-top: 25px;
+        }
+    }
+}
+
+
+@media (min-width: 1023.98px) {
+    .reviewsNavbar {
+        &__title {
+            font-size: 70px;
+            padding-top: 80px;
+            text-align: start;
+            line-height: .92em;
+        }
+
+        &__button {
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import '../../../../styles/settings.scss';
+
+.headerUserModal {
+
+    &__imageBox {
+        position: relative;
+        max-width: 220px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 15px;
+
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $secondary-color;
+    }
+
+
+    &__level {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 2px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7px;
+        gap: 7px;
+        flex-grow: 1;
+    }
+
+    &__name {
+        font-size: 22px;
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 500;
+        color: $text-color;
+        line-height: 1.2em;
+    }
+
+    &__navItem,
+    &__navLink,
+    &__navButton {
+        font-size: 18px !important;
+        font-weight: 500 !important;
+        padding: 3px 0 !important;
+        line-height: 1.2em !important;
+        width: 100% !important;
+        text-align: center !important;
+        color: $title-color;
+    }
+
+    &__navItem {
+        color: $text-color;
+        font-weight: 400;
+    }
+
+    &__navLink {
+        transition: color .2s ease-in-out;
+        @media (hover: hover) {
+            &:hover {
+                color: $active-color;
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                color: $active-color;
+            }
+        }
+    }
+
+
+    &__navButton {
+        border: none !important;
+        background-color: transparent !important;
+    }
+
+    &__qrBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding-top: 10px;
+    }
+    &__qrText{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

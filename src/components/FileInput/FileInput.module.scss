@@ -1,0 +1,48 @@
+@import '../../styles/settings.scss';
+
+
+.fileInput {
+    display: inline-block;
+    cursor: pointer;
+    padding: 25px 25px 20px;
+    border-radius: 5px;
+    color: $title-color;
+    font-weight: 600;
+    background-color: $primary-color;
+    border: 2px dashed $neutral-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .2s ease-in-out;
+
+    &_error {
+        border-color: $active-color ;
+        .fileInput__text {
+            color: $active-color;
+
+        }
+    }
+
+    &_hover {
+        border-color: $green-color-600;
+        .fileInput__text {
+            color: $green-color-600;
+        }
+    }
+    &__desc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    &__text {
+        text-align: center;
+        transition: color .2s ease-in-out;
+
+    }
+    &__loader{
+        font-size: 18px;
+    }
+}

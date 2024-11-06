@@ -1,0 +1,65 @@
+@import '../../../../styles/settings.scss';
+
+.adminWorkDay {
+    &__item {
+        background-color: $secondary-color;
+        padding: 10px 15px !important;
+        width: auto !important;
+        justify-content: flex-start !important;
+        max-width: 460px !important;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: 10px;
+        font-size: 14px;
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    &__name {
+        flex-shrink: 0;
+        font-weight: 600;
+        min-width: 120px;
+        display: none;
+    }
+    &__shortName{
+        flex-shrink: 0;
+        font-weight: 600;
+        min-width: 30px;
+    }
+
+    &__input {
+        width: 100%;
+
+    }
+
+    &__button {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .adminWorkDay {
+        &__row {
+            gap: 20px;
+            font-size: 16px;
+            padding-right: 10px;
+
+        }
+        &__name {
+            display: block;
+        }
+        &__shortName{
+            display: none;
+        }
+    }
+
+}
+
+@media (min-width: 767.98px) {}

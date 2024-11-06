@@ -1,0 +1,10 @@
+@import '../../styles/settings.scss';
+
+.policyAgree {
+    font-size: 13px;
+    line-height: 1.3em;
+    opacity: .8;
+    & a {
+        color: $active-color;
+    }
+}

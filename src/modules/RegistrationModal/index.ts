@@ -1,0 +1,1 @@
+export {RegistrationModal} from './RegistrationModalComponents/RegistrationModal/RegistrationModal'

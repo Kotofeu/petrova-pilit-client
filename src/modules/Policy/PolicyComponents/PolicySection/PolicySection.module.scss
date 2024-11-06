@@ -1,0 +1,51 @@
+@import '../../../../styles/settings.scss';
+
+.policy {
+    min-height: 100vh;
+
+    padding-top: 90px;
+    padding-bottom: 40px;
+    background-color: #FFF;
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 1em;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+    }
+    &__content{
+        padding-top: 30px;
+    }
+
+}
+
+@media (min-width: 479.98px) {
+    .policy{
+        &__title {
+            font-size: 38px;
+        }
+    }}
+
+@media (min-width: 767.98px) {
+    .policy{
+        &__title {
+            font-size: 44px;
+        }
+    }
+}
+@media (min-width: 1023.98px) {
+    .policy{
+        padding-top: 130px;
+        &__title {
+            font-size: 55px;
+        }
+    }
+}

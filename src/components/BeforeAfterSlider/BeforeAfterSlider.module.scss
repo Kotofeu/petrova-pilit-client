@@ -1,0 +1,81 @@
+@import '../../styles/settings.scss';
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    &__handle {
+        position: absolute;
+        width: 7px;
+        height: 100%;
+        background: $title-color;
+        z-index: 3;
+        cursor: col-resize;
+        top: 0;
+
+    }
+
+    &__handleBtn {
+        position: absolute;
+        top: calc(50% - 22px);
+        right: calc(50% - 22px);
+        height: 44px;
+        width: 44px;
+        display: block;
+        background: $title-color;
+        border-radius: 10px;
+        & img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            padding: 3px;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    &__comparisonItem {
+        overflow: hidden;
+        z-index: 1;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        & span {
+            font-weight: 700;
+            font-size: 36px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba($secondary-color, .5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            pointer-events: none;
+            user-select: none;
+        }
+        & img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            vertical-align: middle;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+
+    &__top {
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        & span{
+            top: 10px;
+            left: 10px;
+            bottom: auto;
+            right: auto;
+        }
+    }
+}

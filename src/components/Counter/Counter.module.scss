@@ -1,0 +1,98 @@
+@import '../../styles/settings.scss';
+
+
+
+.counter {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-height: 28px;
+    min-width: 80px;
+}
+
+.counter_button {
+    position: relative;
+    z-index: 1;
+    border: none;
+    padding: 0 1em;
+    background-color: transparent;
+    color: $text-color;
+    &:disabled{
+        opacity: .7;
+    }
+    &::after,
+    &::before {
+        position: absolute;
+        margin: auto 0;
+        display: block;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        font-weight: 400;
+        left: 0;
+        right: 0;
+    }
+
+    &___arrow {
+
+        &::after {
+            transform: translateY(-51%);
+            content: "<";
+        }
+
+        &::before {
+            transform: translateY(-51%);
+            content: ">";
+        }
+    }
+
+    &___char {
+        &::after {
+            content: "–";
+            transform: translateY(-58%);
+
+        }
+
+        &::before {
+            transform: translateY(-54%);
+            content: "+";
+        }
+    }
+
+    &___decrement {
+
+        &::after {
+            left: 7px;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    &___increment {
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            right: 7px;
+        }
+    }
+}
+
+.counter_input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: inherit;
+    font-weight: 600;
+    color: $text-color;
+
+}

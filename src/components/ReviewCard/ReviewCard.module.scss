@@ -1,0 +1,187 @@
+@import '../../styles/settings.scss';
+
+.reviewCard {
+    background-color: $primary-color;
+    border-radius: 10px;
+    padding: 13px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    &_short {
+        cursor: pointer;
+
+        @media (hover: hover) {
+            &:hover {
+                .reviewCard__lookMore {
+                    color: $active-color;
+
+                    &::after {
+                        border-right: 2px solid $active-color;
+                        border-top: 2px solid $active-color;
+                        right: 5px;
+                    }
+
+                    &::before {
+                        background-color: $active-color;
+                        right: 5px;
+
+
+                    }
+                }
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                .reviewCard__lookMore {
+                    color: $active-color;
+
+                    &::after {
+                        border-right: 2px solid $active-color;
+                        border-top: 2px solid $active-color;
+                        right: 5px;
+                    }
+
+                    &::before {
+                        background-color: $active-color;
+                        right: 5px;
+
+
+                    }
+                }
+            }
+        }
+        & .reviewCard__text{
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        & .reviewCard__userName{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 1em;
+
+        }
+    }   
+
+    &__header { 
+        display: flex; 
+        align-items: center; 
+        width: 100%; 
+        overflow: hidden; 
+    } 
+    
+    &__userIcon { 
+        margin-right: 20px; 
+        min-width: 50px; 
+        width: 50px; 
+        min-height: 50px; 
+        height: 50px; 
+        border-radius: 50%; 
+        overflow: hidden; 
+        background-color: $secondary-color; 
+    
+        & img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            pointer-events: none; 
+        } 
+    } 
+    
+    &__reviewUser {
+        width: 100%; 
+        overflow: hidden;
+    } 
+
+    &__userName { 
+        font-size: 20px; 
+        line-height: 1.2em;
+    } 
+    
+    &__rating { 
+        flex-shrink: 0; 
+        padding-top: 4px;
+    }
+
+
+    &__text {
+        padding-top: 7px;
+        font-size: 18px;
+        text-align: justify;
+        white-space: pre-wrap;
+        margin-bottom: auto;
+    }
+
+    &__footer {
+        width: 100%;
+        padding-bottom: 5px;
+        padding-top: 7px;
+    }
+    &__level{
+        padding: 7px 0 0px;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 500;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $text-color;
+        font-weight: 600;
+    }
+    &__date {
+        font-size: 16px;
+    }
+    &__lookMore {
+        font-size: 17px;
+        font-weight: 500;
+        width: 100%;
+        padding-bottom: 7px;
+        position: relative;
+        transition: all .2s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+        }
+
+        &::before {
+            right: 10px;
+            top: 34%;
+            transform: translate(4px, 1px);
+            width: 18px;
+            height: 2px;
+            background-color: $neutral-color;
+        }
+
+        &::after {
+            right: 10px;
+            top: 34%;
+            transform: rotate(45deg) translateY(-50%);
+            width: 13px;
+            height: 13px;
+            border-right: 2px solid $neutral-color;
+            border-top: 2px solid $neutral-color;
+        }
+
+    }
+
+}
+@media (min-width: 479.98px) {
+    .reviewCard {
+        &__userName { 
+            font-size: 22px; 
+            line-height: 1.2em;
+        } 
+        &__rating { 
+            padding-top: 6px;
+        }
+    }
+}

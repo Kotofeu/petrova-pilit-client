@@ -1,0 +1,1 @@
+export {HomeReviewsSection} from './HomeReviewsComponents/HomeReviewsSection/HomeReviewsSection'

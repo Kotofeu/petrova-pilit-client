@@ -1,0 +1,111 @@
+@import '../../../../styles/settings.scss';
+
+.slideImageBox {
+
+    &__image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    &_after,
+    &_before {
+        display: block;
+        z-index: 1;
+        transition: clip-path .2s ease-in-out, z-index .3s ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            z-index: 5;
+            font-size: 30px;
+            font-weight: 700;
+            color: $title-color
+        }
+
+        & img {
+            filter: grayscale(.3);
+            transition: filter .1s ease-in-out;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                z-index: 2;
+                transition: clip-path .2s ease-in-out, z-index 0s ease-in-out;
+
+                & img {
+                    filter:  grayscale(0);
+
+                }
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                z-index: 2;
+                transition: clip-path .2s ease-in-out, z-index 0s ease-in-out;
+
+                & img {
+                    filter: grayscale(0);
+
+                }
+            }
+        }
+    }
+
+
+    &_before {
+        clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%, 0 0);
+
+        &::after {
+            content: "ДО";
+            top: 5px;
+            left: 10px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                clip-path: polygon(100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+
+            }
+        }
+    }
+
+    &_after {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+
+        &::after {
+            content: "ПОСЛЕ";
+            bottom: 5px;
+            right: 10px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+
+            }
+        }
+
+    }
+
+}

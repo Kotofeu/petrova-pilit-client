@@ -1,0 +1,19 @@
+@import '../../../../styles/settings.scss';
+.settingsRow {
+    width: 100%;
+
+    &__title {
+        font-size: 24px;
+        padding-bottom: 6px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        display: block;
+        padding-top: 5px;
+        transition: color .2s ease-in-out;
+        &_error{
+            color: $active-color;
+        }
+    }
+}

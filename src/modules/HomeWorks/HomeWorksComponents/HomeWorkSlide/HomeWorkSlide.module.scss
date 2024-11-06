@@ -1,0 +1,112 @@
+@import '../../../../styles/settings.scss';
+
+.homeWorkSlide {
+    overflow: hidden;
+    cursor: pointer;
+
+    &__preview {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+
+    }
+
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        cursor: grab;
+    }
+
+    &__content {
+        padding: 15px 10px;
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        padding-right: 50px;
+
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &::after {
+            right: 20px;
+            top: 47%;
+            transform: translate(4px, 1px);
+            width: 18px;
+            height: 2px;
+            background-color: $neutral-color;
+
+        }
+
+        &::before {
+            right: 20px;
+            top: 47%;
+            transform: rotate(45deg) translateY(-50%);
+            width: 13px;
+            height: 13px;
+            border-right: 2px solid $neutral-color;
+            border-top: 2px solid $neutral-color;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+
+                &::after {
+                    background-color: $active-color;
+                    right: 18px;
+                }
+
+                &::before {
+                    border-right: 2px solid $active-color;
+                    border-top: 2px solid $active-color;
+                    right: 18px;
+
+                }
+            }
+
+        }
+
+        @media (hover: none) {
+            &:active {
+                &::after {
+                    background-color: $active-color;
+                    right: 18px;
+                }
+
+                &::before {
+                    border-right: 2px solid $active-color;
+                    border-top: 2px solid $active-color;
+                    right: 18px;
+
+                }
+            }
+        }
+
+    }
+
+    &__title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 20px;
+        flex-grow: 1;
+
+    }
+
+}

@@ -1,0 +1,179 @@
+@import '../../../../styles/settings.scss';
+
+.homeReviews {
+
+    padding: 45px 0;
+    min-height: auto;
+    background-color: $neutral-color;
+    position: relative;
+
+    &__titleBox {
+        padding-left: 0px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__title {
+        font-weight: 500;
+        color: $primary-color;
+
+        & span {
+            color: $active-color;
+        }
+    }
+
+    &__button {
+        margin-top: 13px;
+        padding: 0;
+        border: none;
+        position: relative;
+        display: inline-block;
+
+        &:hover {
+            &::after {
+                background-color: $active-color;
+            }
+        }
+
+        &::after {
+            content: '';
+            pointer-events: none;
+            position: absolute;
+            transition: all .2s ease-in-out;
+            bottom: 3px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: $primary-color;
+        }
+    }
+
+    &__buttonDecoration {
+        color: $primary-color;
+        font-size: 19px;
+        font-weight: 400;
+        position: relative;
+        font-family: "Geologica";
+        padding-right: 25px;
+        padding-bottom: 8px;
+        transition: all .2s ease-in-out;
+        display: block;
+
+        &:hover {
+            color: $active-color;
+            padding-right: 30px;
+
+            &::after {
+                background-color: $active-color;
+            }
+
+            &::before {
+                border-right: 2px solid $active-color;
+                border-top: 2px solid $active-color;
+            }
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            transition: all .2s ease-in-out;
+
+        }
+
+        &::after {
+            right: 0;
+            top: 42%;
+            transform: translate(5px, 1px);
+            width: 18px;
+            height: 2px;
+            background-color: $primary-color;
+
+        }
+
+        &::before {
+            right: 0;
+            top: 42%;
+            transform: rotate(45deg) translateY(-50%);
+            width: 13px;
+            height: 13px;
+            border-right: 2px solid $primary-color;
+            border-top: 2px solid $primary-color;
+        }
+    }
+
+    &__slider {
+        overflow: visible;
+        padding: 0 0px;
+        margin-top: 28px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .homeReviews {
+        padding: 60px 0;
+
+        &__titleBox {
+            padding-left: 20px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+            width: 100%;
+
+        }
+
+        &__button {
+            margin-top: 15px;
+        }
+
+        &__buttonDecoration {
+            font-size: 22px;
+        }
+
+        &__slider {
+            padding: 0 20px;
+            margin-top: 22px;
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .homeReviews {
+        padding: 80px 0;
+
+        &__titleBox {
+            padding-left: 35px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            width: 100%;
+
+        }
+
+        &__button {
+            margin-top: 20px;
+        }
+
+        &__buttonDecoration {
+            font-size: 24px;
+        }
+
+        &__slider {
+            padding: 0 30px;
+            margin-top: 28px;
+        }
+    }
+}
+
+@media (min-width: 1023.98px) {
+    .homeReviews {
+
+        &__slider {
+            padding: 0 30px;
+            margin-top: 38px;
+        }
+    }
+}

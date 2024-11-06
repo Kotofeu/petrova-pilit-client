@@ -1,0 +1,51 @@
+@import '../../../../styles/settings.scss';
+
+
+.settingsFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 13px;
+    padding: 20px 30px;
+    background-color: $secondary-color;
+    &__footerFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 13px;
+    }
+
+    &__footerBtn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &__modalTitle {
+        font-size: 22px;
+        line-height: 1.2em;
+        padding-bottom: 14px;
+        color: $text-color;
+        text-align: center;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .settingsFooter {
+        flex-direction: row;
+        gap: 20px;
+        &__footerFlex {
+            flex-direction: row;
+            gap: 40px;
+        }
+    
+        &__footerBtn {
+            font-size: 16px;
+        }
+    }
+}
+

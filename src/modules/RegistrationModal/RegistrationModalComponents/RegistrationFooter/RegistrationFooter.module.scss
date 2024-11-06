@@ -1,0 +1,24 @@
+@import '../../../../styles/settings.scss';
+
+.registrationFooter {
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        gap: 5px;
+        font-family: "Montserrat";
+        margin-top: 5p
+    }
+
+    &__button {
+        padding: 0;
+        border: none;
+        font-weight: 500;
+        color: $blue-color-600;
+        font-size: 15px;
+    }
+
+    &__policy {
+        padding-top: 10px;
+    }
+}

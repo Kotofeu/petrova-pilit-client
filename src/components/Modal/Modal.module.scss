@@ -1,0 +1,181 @@
+@import '../../styles/settings.scss';
+
+.modal {
+    overscroll-behavior: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal_inner {
+    max-width: $container-width;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    overflow: hidden;
+    margin: 60px 10px;
+}
+
+.modal_close {
+    background-color: rgba($neutral-color, .7);
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 50%;
+        bottom: 16px;
+        content: ' ';
+        height: 36px;
+        width: 3px;
+        background-color: $primary-color;
+        transition: scale .2s ease-in-out;
+    }
+
+    &::before {
+        animation: crossShow .3s forwards;
+
+    }
+
+    &::after {
+        animation: crossShow1 .3s forwards;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+
+            &::before,
+            &::after {
+                scale: 1.1;
+            }
+        }
+
+    }
+
+    @media (hover: none) {
+        &:active {
+
+            &::before,
+            &::after {
+                scale: 1.1;
+            }
+        }
+    }
+
+}
+
+.modalBlock{
+    display: block;
+    padding: 20px 22px 22px;
+    max-height: calc(100vh - 120px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #FFF;
+    &__confirm{
+        border-radius: 0 !important;
+        border-color: $blue-color-600 !important;
+        background-color: $blue-color-600 !important;
+        color: #FFF !important;
+        opacity: .8;
+        width: 100%;
+        margin-top: 18px;
+        &:disabled{
+            cursor: default;
+            pointer-events: none;
+            filter: grayscale(50%);
+        }
+        @media (hover: hover) {
+            &:hover {
+                opacity: 1;
+            }
+    
+        }
+    
+        @media (hover: none) {
+            &:active {
+                opacity: 1;
+            }
+        }
+    }
+
+
+    &__title{
+        text-align: center;
+        font-size: 36px;
+        font-weight: 500;
+        padding-bottom: 8px;
+        color: $text-color;
+        text-align: center;
+
+    }
+    &__subtitle{
+        padding-bottom: 20px;
+        font-size: 22px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1.2em;
+    }
+    &__buttons{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__button{
+        width: 100%;
+        background-color: transparent;
+        padding: 8px 15px;
+        border-width: 2px;
+        border-radius: 10px;
+        font-size: 20px;
+        &_ok {
+            color: $active-color;
+            border-color: $active-color;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+@keyframes crossShow {
+    0% {
+        rotate: 0;
+
+    }
+
+    100% {
+        rotate: -45deg;
+
+    }
+}
+
+@keyframes crossShow1 {
+    0% {
+        rotate: 0;
+
+    }
+
+    100% {
+        rotate: 45deg;
+
+    }
+}

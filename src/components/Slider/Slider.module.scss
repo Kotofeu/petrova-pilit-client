@@ -1,0 +1,190 @@
+@import '../../styles/settings.scss';
+
+.slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        opacity: 1;
+        transition: opacity .2s ease-in-out;
+        border: none;
+        background-color: transparent;
+        padding: inherit;
+
+    }
+
+    &__arrow_disabled {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__prev {
+        left: 0;
+    }
+
+    &__next {
+        right: 0;
+
+        transform: scaleX(-1);
+    }
+
+    &__prevArrowBox,
+    &__nextArrowBox {
+        height: 100%;
+        width: 70px;
+        transition: opacity .2s ease-in-out;
+        background: linear-gradient(to right, rgba($neutral-color, .5), rgba($neutral-color, 0));
+        padding: 0;
+        opacity: .5;
+        cursor: pointer;
+        position: relative;
+
+        @media (hover: hover) {
+            &:hover {
+                opacity: 1;
+
+            }
+    
+        }
+    
+        @media (hover: none) {
+            &:active {
+                opacity: 1;
+
+            }
+        }
+
+    }
+
+    &__prevArrow,
+    &__nextArrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform: rotate(90deg);
+        cursor: pointer;
+
+        & span {
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-bottom: 2px solid $primary-color;
+            border-right: 2px solid $primary-color;
+            transform: rotate(45deg);
+            margin: -10px;
+            animation: animate 2.5s infinite;
+        }
+
+        & span:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        & span:nth-child(3) {
+            animation-delay: -0.4s;
+        }
+
+    }
+
+    &__slides {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__slide {
+        position: relative;
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__pageButton {
+        position: relative;
+        margin: 0 3px;
+        padding: 0;
+        width: 22px;
+        height: 22px;
+        border: none;
+        background-color: transparent;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            left: 1px;
+            border-radius: 50%;
+            border: 2px solid $active-color;
+            background-color: transparent;
+            transition: background-color .2s ease-in-out;
+        }
+
+        &_active {
+            &::after {
+                background-color: $active-color;
+            }
+        }
+    }
+
+}
+.sliderModal{
+    height: 100%;
+    position: relative;
+    overflow: visible;
+    &__slider{
+        height: 100%;
+    }
+    &__slide{
+        display: none;
+    }
+    &__arrow{
+        border: none;
+        width: 25px;
+        height: 25px;
+        margin: 12px;
+        padding: 0;
+        background-color: transparent;
+        border-top: 3px solid $primary-color;
+        border-left: 3px solid $primary-color;
+        transform: rotate(-45deg);
+        transition: all .15s ease-in-out;
+        &:hover{
+            transform: rotate(-45deg) translate(-4px, -4px);
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}

@@ -1,0 +1,90 @@
+@import '../../../../styles/settings.scss';
+
+.adminServices {
+    &__item {
+        background-color: $secondary-color;
+        padding: 10px 15px !important;
+        gap: 15px !important;
+        width: auto !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 14px;
+        width: 100%;
+    }
+    &__inputs {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__inputsRow{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    &__value {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+
+    }
+
+
+    &__textArea {
+        min-height: 6em !important;
+        max-height: 12em !important;
+
+    }
+
+}
+
+@media (min-width: 479.98px) {
+    .adminServices {
+        &__row {
+            gap: 10px;
+            font-size: 16px;
+
+        }
+    }
+}
+
+@media (min-width: 767.98px) {
+    .adminServices {
+        &__item {
+            align-items: center !important;
+        }
+
+        &__inputs {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 10px;
+        }
+        &__inputsRow{
+            flex-direction: row;
+            gap: 10px;
+        }
+        &__textArea {
+            min-height: 4em !important;
+            max-height: 8em !important;
+        }
+    }
+}

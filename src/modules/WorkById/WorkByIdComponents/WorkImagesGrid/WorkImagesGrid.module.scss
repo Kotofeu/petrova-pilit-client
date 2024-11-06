@@ -1,0 +1,68 @@
+@import '../../../../styles/settings.scss';
+
+.workImages {
+    padding: 45px 0 50px;
+    min-height: auto;
+    background-color: $neutral-color;
+    position: relative;
+    height: auto;
+    &__title {
+        text-align: center;
+        color: $primary-color;
+        margin-bottom: 25px;
+        & span {
+            color: $active-color;
+        }
+    }
+
+    &__grid {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    &__modalImg {
+        object-fit: contain;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__slide {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (min-width: 479.98px) {
+    .workImages {
+        padding: 50px 0 60px;
+
+    }
+}
+
+@media (min-width: 767.98px) {
+    .workImages {
+        padding: 55px 0 60px;
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: 1023.98px) {
+    .workImages {
+        padding: 80px 0;
+        &__title {
+            margin-bottom: 35px;
+        }
+    }
+}

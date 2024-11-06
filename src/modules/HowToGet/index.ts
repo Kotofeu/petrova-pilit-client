@@ -1,0 +1,1 @@
+export {HowToGetSection} from './HowToGetComponents/HowToGetSection/HowToGetSection'

@@ -1,0 +1,1 @@
+export {AboutMainSection} from './AboutMainComponents/AboutMainSection/AboutMainSection'

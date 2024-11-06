@@ -1,0 +1,152 @@
+@import '../../../../styles/settings.scss';
+
+.header {
+    position: relative;
+    z-index: 99;
+
+    &__banner {
+        display: none;
+    }
+
+    &__bannerText {
+        text-align: center;
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__navigation {
+        position: fixed;
+        transition: top 0.3s ease;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 12px 0px;
+        background-color: #FFF;
+        border-bottom: 1px solid rgba($neutral-color, .2);
+    }
+
+    &__navigationInner {
+        max-width: $container-width;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    &__logo {
+        min-width: 100px;
+        font-family: 'GrandHotel' !important;
+        font-size: 40px !important;
+        line-height: 0 !important;
+        color: $title-color !important;
+    }
+
+    &__navigationLinks {
+        display: none;
+    }
+
+    &__link {
+        padding: 5px 8px;
+        margin: 0px 7px;
+    }
+
+    &__buttons {
+        min-width: 100px;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+    }
+    &__burgerLinks{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+        gap: 15px;
+        padding: 30px 0;
+    }
+    &__burgerLink{
+        font-size: 24px;
+    }
+    &__burgerBanner{
+        font-size: 20px;
+        text-align: center;
+        color: $title-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+    }
+    &__burger {
+        display: flex;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        height: 27px;
+        width: 28px;
+        flex-direction: column;
+        justify-self: flex-end;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        position: relative;
+        cursor: pointer;
+
+        &>span {
+            transition: all .2s;
+            background-color: $neutral-color;
+            height: 4px;
+            width: 28px;
+            margin-top: 5px;
+            border-radius: 2px;
+        }
+
+        &>span:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__button {
+        width: 225px;
+    }
+
+}
+
+@media (min-width: 1023.98px) {
+    .header {
+        &__banner {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            background-color: $neutral-color;
+            transition: opacity 0.3s ease;
+
+            &_hidden {
+                opacity: 0;
+            }
+        }
+        &__navigation {
+            top: 37px;
+
+            &_upper {
+                top: 0;
+            }
+        }
+
+        &__navigationLinks {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__burger {
+            display: none;
+        }
+    }
+}

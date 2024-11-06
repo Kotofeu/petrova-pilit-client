@@ -1,0 +1,23 @@
+.authInput {
+    margin: 10px 0;
+}
+
+.authPass {
+    width: 100%;
+    position: relative;
+    &__input{
+        padding-right: 48px;
+
+    }
+    &__passShow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        width: 36px;
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+}
+

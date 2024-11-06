@@ -1,0 +1,1 @@
+export {AboutAdvantages} from './AboutAdvantagesComponents/AboutAdvantages/AboutAdvantages'

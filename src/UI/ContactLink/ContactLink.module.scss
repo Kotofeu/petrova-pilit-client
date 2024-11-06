@@ -1,0 +1,25 @@
+
+.contact {
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.contact___email {
+    letter-spacing: .01em;
+}
+
+.contact___tel {
+    letter-spacing: .05em;
+
+}
+
+.contact___socialLink {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.contact_socialImage {
+    height: 100%;
+    object-fit: contain;
+}

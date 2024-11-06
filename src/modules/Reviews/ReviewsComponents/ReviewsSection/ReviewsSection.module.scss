@@ -1,0 +1,100 @@
+@import '../../../../styles/settings.scss';
+
+.reviewsSection {
+    min-height: 100vh;
+    max-width: $container-width;
+    margin: 0 auto;
+
+    &__navbar {
+        position: relative;
+        width: 100%;
+        background-color: $neutral-color;
+
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $neutral-color;
+        height: 100%;
+        width: 100vw;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        padding: 20px 10px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__reviewDelete{
+        border: none;
+        margin-left: auto;
+        padding: 10px 0;
+        display: block;
+        font-size: 17px;
+    }
+    &__review {
+        background-color: #FFF;
+        border: 2px solid #FFF;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        width: 100%;
+        &_empty{
+            width: 100%;
+            height: 100px;
+            flex-shrink: 1;
+            border-radius: 10px;
+        }
+        &_selected {
+            border: 2px solid $active-color;
+        }
+    }
+    &__pagination{
+        margin-top: auto;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .reviewsSection {
+
+        &__list {
+            padding: 25px 20px 40px;
+        }
+
+    }}
+
+@media (min-width: 1023.98px) {
+    .reviewsSection {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &__navbar {
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            min-width: 40%;
+            height: 100vh;
+        }
+        &__review_empty{
+            height: calc(25vh - 31px - 14px - 20px - 5px);
+            border-radius: 10px;
+        }
+        &__list {
+            min-height: 100vh;
+            padding-top: 130px;
+            padding-bottom: 20px;
+            display: flex;
+            margin-left: 40px;
+            padding-left: 0;
+            padding-right: 20px;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}

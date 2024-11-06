@@ -1,0 +1,45 @@
+.accordion {
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    &__title {
+        position: relative;
+    }
+
+    &__openButton {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border: none;
+        background-color: transparent;
+        padding: 0 15px;
+        transition: transform .3s ease-in-out;
+        will-change: transform;
+        z-index: 2;
+        display: flex;
+        align-items: flex-start;
+        &_active {
+            & img {
+                transform: rotate(180deg);
+
+            }
+
+        }
+    }
+
+    &__arrow {
+        padding: .8rem 0;
+        width: 20px;
+        object-fit: contain;
+        transition: transform .15s ease-in-out;
+    }
+
+    &__description {
+        overflow: hidden;
+    }
+}

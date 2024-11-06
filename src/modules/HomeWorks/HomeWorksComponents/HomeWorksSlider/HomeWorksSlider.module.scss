@@ -1,0 +1,43 @@
+@import '../../../../styles/settings.scss';
+
+.homeWorksSlider {
+    &_empty {
+        display: flex;
+        padding-bottom: 30px !important;
+
+        & div {
+            box-sizing: content-box;
+            padding-bottom: 50px;
+            aspect-ratio: 4/3;
+            width: 100%;
+            opacity: .5;
+            background-color: $secondary-color;
+            margin: 0 5px;
+        }
+
+        & div:nth-child(2n) {
+            display: none;
+        }
+
+        & div:nth-child(3n) {
+            display: none;
+        }
+
+        @media (min-width: 550px) {
+            & div:nth-child(2n) {
+                display: block;
+            }
+
+            @media (min-width: 1000px) {
+                & div:nth-child(3n) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        margin: 0 5px;
+    }
+
+}

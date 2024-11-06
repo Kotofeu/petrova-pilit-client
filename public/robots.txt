@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin
+Disallow: /user
+
+Sitemap: https://petrova-pilit.ru/sitemap.xml

@@ -1,0 +1,53 @@
+@import '../../styles/settings.scss';
+
+.listItemController {
+    padding: 2px;
+    height: 100%;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_haveAdd {
+            padding-bottom: 13px;
+            border-bottom: 2px dashed $neutral-color;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+        position: relative;
+        padding-left: 2em;
+
+        &_add {
+
+            margin-top: 10px;
+        }
+    }
+
+    &__index {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        font: inherit;
+    }
+    &__controllers{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+
+    }
+    &__controller {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+    }
+
+
+}

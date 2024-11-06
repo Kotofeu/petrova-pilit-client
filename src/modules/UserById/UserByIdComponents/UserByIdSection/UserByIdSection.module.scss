@@ -1,0 +1,44 @@
+@import '../../../../styles/settings.scss';
+
+.userById {
+    padding: 85px 0 30px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    &__loader {
+        position: fixed !important;
+        top: 15px;
+        right: 15px;
+        font-size: 50px;
+        z-index: 99999;
+    }
+
+    &__404 {
+        font-size: 100px;
+        text-align: center;
+        line-height: 1em;
+    }
+}
+
+@media (min-width: 479.98px) {
+    .userById {
+        max-width: 800px;
+
+    }
+
+}
+
+@media (min-width: 767.98px) {
+
+    .userById {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1023.98px) {
+    .userById {
+        padding: 120px 0 30px;
+
+    }
+}

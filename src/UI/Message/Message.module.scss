@@ -1,0 +1,32 @@
+@import '../../styles/settings.scss';
+
+.message {
+    width: auto;
+    pointer-events: all;
+    cursor: pointer;
+
+    &__text {
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: $primary-color;
+        font-weight: 600;
+        height: 100%;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+
+        &_error {
+            background-color: $active-color;
+        }
+
+        &_message {
+            background-color: $blue-color-600;
+
+        }
+
+        &_complete {
+            background-color: $green-color-600;
+        }
+
+    }
+}
