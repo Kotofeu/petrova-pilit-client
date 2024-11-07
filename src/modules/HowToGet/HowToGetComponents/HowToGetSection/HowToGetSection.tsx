@@ -33,9 +33,9 @@ export const HowToGetSection = observer(() => {
               height='100%'
               playing={applicationStore.howToGetPreview ? true : false}
               style={{ aspectRatio: "3/4", backgroundColor: '#F2F1F0' }}
-              url={`${process.env.REACT_APP_API_URL}/${applicationStore.howToGetVideo}`}
+              url={`${process.env.REACT_APP_API_URL_FILE}/${applicationStore.howToGetVideo}`}
               controls
-              light={`${process.env.REACT_APP_API_URL}/${applicationStore.howToGetPreview}` || ''}
+              light={`${process.env.REACT_APP_API_URL_FILE}/${applicationStore.howToGetPreview}` || ''}
             />
             : null
         }

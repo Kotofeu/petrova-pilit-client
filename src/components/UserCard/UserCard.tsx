@@ -122,7 +122,7 @@ const UserCard: FC<IUserCard> = observer(({ className, user, isShortCard = false
                         className={classes.userCard__userImage}
                         src={
                             user?.imageSrc
-                                ? `${process.env.REACT_APP_API_URL}/${user.imageSrc}`
+                                ? `${process.env.REACT_APP_API_URL_FILE}/${user.imageSrc}`
                                 : defaultUSerIcon
                         }
                         alt={user?.name || 'Фото пользователя'}

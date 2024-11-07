@@ -35,7 +35,7 @@ const ReviewCard: FC<IReviewCard> = memo((props) => {
         >
             <header className={classes.reviewCard__header}>
                 <div className={classes.reviewCard__userIcon}>
-                    <img src={user?.imageSrc ? `${process.env.REACT_APP_API_URL}/${user.imageSrc}` : defaultUSerIcon} alt={user?.name || user?.email} />
+                    <img src={user?.imageSrc ? `${process.env.REACT_APP_API_URL_FILE}/${user.imageSrc}` : defaultUSerIcon} alt={user?.name || user?.email} />
                 </div>
                 <div className={classes.reviewCard__reviewUser}>
                     <h6 className={classes.reviewCard__userName} title={user?.name || user?.email}>{user?.name || user?.email}</h6>

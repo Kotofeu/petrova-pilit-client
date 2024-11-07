@@ -22,7 +22,7 @@ const ServerImage: FC<IServerImage> = memo(({ className, src, alt, title = alt, 
   return (
     <img
       className={className}
-      src={hasError ? src : `${process.env.REACT_APP_API_URL}/${src}`}
+      src={hasError ? src : `${process.env.REACT_APP_API_URL_FILE}/${src}`}
       onError={imgBroke}
       alt={alt}
       title={title}

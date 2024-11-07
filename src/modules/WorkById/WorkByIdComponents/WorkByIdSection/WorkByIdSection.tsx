@@ -100,8 +100,8 @@ export const WorkByIdSection: FC<IWorkByIdSection> = observer(({
                         (work.imageAfterSrc && work.imageBeforeSrc)
                             ? <BeforeAfterSlider
                                 className={classes.workById__slider}
-                                before={work.imageBeforeSrc ? `${process.env.REACT_APP_API_URL}/${work.imageBeforeSrc}` : ''}
-                                after={work.imageAfterSrc ? `${process.env.REACT_APP_API_URL}/${work.imageAfterSrc}` : ''}
+                                before={work.imageBeforeSrc ? `${process.env.REACT_APP_API_URL_FILE}/${work.imageBeforeSrc}` : ''}
+                                after={work.imageAfterSrc ? `${process.env.REACT_APP_API_URL_FILE}/${work.imageAfterSrc}` : ''}
 
                             />
                             : <ServerImage

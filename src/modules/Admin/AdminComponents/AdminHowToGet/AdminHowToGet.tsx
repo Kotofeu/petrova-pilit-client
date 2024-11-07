@@ -47,7 +47,7 @@ export const AdminHowToGet: FC = observer(() => {
                                     width='100%'
                                     height='100%'
                                     style={{ pointerEvents: 'all', aspectRatio: '3/4' }}
-                                    url={video ? URL.createObjectURL(video) : `${process.env.REACT_APP_API_URL}/${applicationStore.howToGetVideo}`}
+                                    url={video ? URL.createObjectURL(video) : `${process.env.REACT_APP_API_URL_FILE}/${applicationStore.howToGetVideo}`}
                                     controls
                                 />
                                 : null

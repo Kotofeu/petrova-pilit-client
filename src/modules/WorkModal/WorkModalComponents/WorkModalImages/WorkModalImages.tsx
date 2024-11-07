@@ -58,7 +58,7 @@ export const WorkModalImages: FC<IWorkModalImages> = memo(({
                     title='Фото до'
                     name='beforeImage'
                     setImage={(file) => setBefore(file)}
-                    initialImage={initialBefore ? `${process.env.REACT_APP_API_URL}/${initialBefore}` : ''}
+                    initialImage={initialBefore ? `${process.env.REACT_APP_API_URL_FILE}/${initialBefore}` : ''}
                     aspect={4 / 3}
                 />
                 <ImageCropperWithResult
@@ -66,7 +66,7 @@ export const WorkModalImages: FC<IWorkModalImages> = memo(({
                     title='Фото после'
                     name='afterImage'
                     setImage={(file) => setAfter(file)}
-                    initialImage={initialAfter ? `${process.env.REACT_APP_API_URL}/${initialAfter}` : ''}
+                    initialImage={initialAfter ? `${process.env.REACT_APP_API_URL_FILE}/${initialAfter}` : ''}
                     aspect={4 / 3}
                 />
             </div>

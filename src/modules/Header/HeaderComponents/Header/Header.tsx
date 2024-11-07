@@ -100,7 +100,7 @@ export const Header: FC = observer(() => {
             <HeaderUser
               className={classes.header__user}
               name={userStore.user?.name || ''}
-              imageSrc={userStore.user?.imageSrc ? `${process.env.REACT_APP_API_URL}/${userStore.user?.imageSrc}` : defaultImage }
+              imageSrc={userStore.user?.imageSrc ? `${process.env.REACT_APP_API_URL_FILE}/${userStore.user?.imageSrc}` : defaultImage }
               isAdmin={userStore.isAdmin}
               isAuth={userStore.isAuth}
               openModal={userModalHandler}

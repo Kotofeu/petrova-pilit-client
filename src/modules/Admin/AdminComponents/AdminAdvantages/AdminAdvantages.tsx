@@ -102,7 +102,7 @@ export const AdminAdvantages: FC = observer(() => {
                             image={
                                 advantage.iconFile
                                     ? URL.createObjectURL(advantage.iconFile)
-                                    : `${process.env.REACT_APP_API_URL}/${advantage.iconSrc}`
+                                    : `${process.env.REACT_APP_API_URL_FILE}/${advantage.iconSrc}`
                             }
                             title='Иконка'
                         />

@@ -95,7 +95,7 @@ export const AdminSocial: FC = observer(() => {
                             image={
                                 socialLink.imageFile
                                     ? URL.createObjectURL(socialLink.imageFile)
-                                    : `${process.env.REACT_APP_API_URL}/${socialLink.imageSrc}`
+                                    : `${process.env.REACT_APP_API_URL_FILE}/${socialLink.imageSrc}`
                             }
                             title='Иконка'
                         />
